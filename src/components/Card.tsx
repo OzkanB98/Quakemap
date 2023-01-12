@@ -19,11 +19,11 @@ export const Card = ({feature}: CardProps) => {
             </div>
             <div className="datafield">
                 <p>Time</p>
-                <input value={new Date(feature?.properties.time).toUTCString()} disabled></input>
+                <input value={feature !== undefined ? new Date(feature?.properties.time).toUTCString() : ''} disabled></input>
             </div>
             <div className="datafield">
                 <p>Updated</p>
-                <input value={new Date(feature?.properties.updated).toUTCString()} disabled></input>
+                <input value={feature !== undefined ? new Date(feature?.properties.updated).toUTCString() : ''} disabled></input>
             </div>
             <div className="datafield">
                 <p>Type</p>
